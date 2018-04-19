@@ -1,0 +1,712 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+}
+/*reset*/
+.wrap{
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a {
+    text-decoration:none;
+}
+
+
+
+.clearfix{
+	clear: both;
+}
+
+.header{
+    background-image: url(../img/header_desktop.png);
+	height: 420px;
+}
+
+@media(max-width: 598px){
+	.header{
+		background-image: url(../img/header_mobile.png);
+	}
+}
+
+@media(max-width: 414px){
+	.header{
+		background-image: url(../img/header_mobile.png);
+	}
+}
+
+@media(max-width: 320px){
+	.header{
+		background-image: url(../img/header_mobile.png);
+	}
+}
+.title {
+	float: left;
+	padding-left: 10px;
+	 padding-top: 15px;
+   }
+ 
+   .title h1{
+	 color: white;
+	 padding-left: 10px;
+	 padding-top: 15px;
+	 font-family: 微軟正黑體;
+	 font-size: 20px;
+   }
+ 
+   .title a{
+	 color: white;
+   }
+
+   @media(max-width: 414px){
+	.title h1{
+		padding-left: 10px;
+		padding-top: 25px;
+	  }
+}
+   
+   .toplist{
+	 float: right;
+   }
+
+
+.toplist ul{
+	font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+	color: #FFFFFF;
+	padding-top: 30px;
+}
+
+.toplist li{
+	float: left;
+	padding-right: 10px;
+}
+
+.toplist li a{
+	color: #ffffff;
+  }
+
+/*在PC上隱藏漢堡選單*/
+.showmenu2{
+	display: none;
+}
+
+
+@media(max-width: 598px){
+	.fas{
+		font-size: 15px;
+	}
+	.top_list {
+		/*隱藏選單開始*/
+		max-height: 0px;
+		overflow: hidden;
+		/*隱藏選單結束*/
+		transition: max-height 2.3s;
+		margin-top: 1px;
+		/*絕對定位疊在網頁上*/
+		position: absolute;
+		z-index: 100;
+		/*header 80px+1px boder 線條*/
+		top: 76px;
+		left: 0;
+		right: 0;
+		background:  #1d0600;
+	  }
+	  .top_list li {
+		float: none;
+		border-bottom: 1px dashed #69CA62;
+	  }
+	  .toplitop_listst li a{
+		transition: all 0.3s;
+	  }
+	
+	  .top_list li a:hover{
+		background: #FFFFFF;
+		color: black;
+	  }
+	
+	  .showmenu2{
+		margin-bottom: 5%;
+		display: block;
+		float: right;
+		margin: 3em;
+		color: white;
+	  }
+	
+	  .top_list h4{
+		 padding-bottom: 10px;
+	  }
+	
+	  /*jQ點擊後動態在 body 加上 class */
+	  .menu-show .top_list{
+		max-height: 500px
+	  }
+	
+}
+
+@media(max-width: 414px){
+	.fas{
+		font-size: 15px;
+	}
+	.top_list {
+		/*隱藏選單開始*/
+		max-height: 0px;
+		overflow: hidden;
+		/*隱藏選單結束*/
+		transition: max-height 2.3s;
+		margin-top: 1px;
+		/*絕對定位疊在網頁上*/
+		position: absolute;
+		z-index: 100;
+		/*header 80px+1px boder 線條*/
+		top: 76px;
+		left: 0;
+		right: 0;
+		background:  #1d0600;
+	  }
+	  .top_list li {
+		float: none;
+		border-bottom: 1px dashed #69CA62;
+	  }
+	  .toplitop_listst li a{
+		transition: all 0.3s;
+	  }
+	
+	  .top_list li a:hover{
+		background: #FFFFFF;
+		color: black;
+	  }
+	
+	  .showmenu2{
+		margin-bottom: 5%;
+		display: block;
+		float: right;
+		margin: 3em;
+		color: white;
+	  }
+	
+	  .top_list h4{
+		 padding-bottom: 10px;
+	  }
+	
+	  /*jQ點擊後動態在 body 加上 class */
+	  .menu-show .top_list{
+		max-height: 500px
+	  }
+	
+}
+
+@media(max-width: 320px){
+	.top_list {
+		/*隱藏選單開始*/
+		max-height: 0px;
+		overflow: hidden;
+		/*隱藏選單結束*/
+		transition: max-height 2.3s;
+		margin-top: 1px;
+		/*絕對定位疊在網頁上*/
+		position: absolute;
+		z-index: 100;
+		/*header 80px+1px boder 線條*/
+		top: 60px;
+		left: 0;
+		right: 0;
+		background:  #1d0600;
+	  }
+	  .top_list li {
+		float: none;
+		border-bottom: 1px dashed #69CA62;
+	  }
+	  .toplitop_listst li a{
+		transition: all 0.3s;
+	  }
+	
+	  .top_list li a:hover{
+		background: #FFFFFF;
+		color: black;
+	  }
+	
+	  .showmenu2{
+		margin-bottom: 5%;
+		display: block;
+		float: right;
+		margin: 3em;
+		color: #FF5E45;
+	  }
+	
+	  .top_list h4{
+		 padding-bottom: 10px;
+	  }
+	
+	  /*jQ點擊後動態在 body 加上 class */
+	  .menu-show .top_list{
+		max-height: 500px
+	  }
+	
+}
+
+  
+
+.text{
+    background: rgba(0,0,0,0.35);
+	height: 152px;
+	width: 60%;
+	font-family: MicrosoftJhengHeiRegular;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin: 0 auto;
+	margin-top: 100px;
+	text-align: center;
+}
+
+.text h1{
+    padding-top: 20px;
+}
+
+.text p{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: #FFFFFF;
+	text-align: center;
+	padding-top: 20px;
+}
+
+@media(max-width: 768px){
+	.text{
+       width:70%;
+       font-size: 32px;
+	}
+}
+
+@media(max-width: 414px){
+	.text{
+       width:70%;
+       font-size: 28px;
+	}
+}
+
+@media(max-width: 320px){
+	.text{
+       width:70%;
+       font-size: 24px;
+	}
+}
+
+.content{
+	background: #efe9e7;
+	height: 700px;
+}
+
+
+.content .nav {
+	float: left; 
+	width: 200px;
+	color: #6f4e42;
+}
+
+.content .nav h1{
+	text-align: center;
+	padding-top: 30px;
+}
+
+.content .nav ul{
+	padding-left: 30px;
+	padding-top: 10px;
+}
+
+.content .nav li{
+	border-bottom: 1px solid #6f4e42;
+	padding-bottom: 5px;
+	padding: 10px 5px;
+}
+
+.leftmenu  li a{
+	padding-bottom: 5px;
+	color: #6f4e42;
+	display: block;
+}
+
+.leftmenu  li:hover{
+	background-color: #3D1101;
+}
+
+.content .nav li:hover{
+	color: #6f4e42;
+}
+
+.content .nav2 {
+	float: right; 
+	width: 780px;
+}
+/*在PC上隱藏漢堡選單*/
+.showmenu{
+	display: none;
+}
+
+@media(max-width: 598px){
+	.content{
+		height: auto;
+	}
+	.leftmenu{
+		margin-left: 8%;
+	}
+	.nav{
+		margin-left: 20%;
+	}
+}
+
+
+@media(max-width: 414px){
+	.content{
+		height: auto;
+	}
+	.leftmenu{
+		margin-left: 8%;
+	}
+	.nav{
+		margin-left: 8%;
+	}
+}
+
+@media(max-width: 320px){
+	.content{
+		height: auto;
+	}
+
+	.content .nav{
+		float: none;
+		margin-left: 20px;
+	}
+
+	.content h1{
+	   display: none;
+	}
+    .content a{
+	  float: left;
+	}
+
+  .leftmenu {
+    /*隱藏選單開始*/
+    max-height: 0px;
+    overflow: hidden;
+    /*隱藏選單結束*/
+    transition: max-height 2.3s;
+    margin-top: 1px;
+    /*絕對定位疊在網頁上*/
+    position: absolute;
+    z-index: 100;
+    /*header 80px+1px boder 線條*/
+    top: 450px;
+    left: 0;
+    right: 0;
+    background:  #FFFFFF;
+  }
+  .leftmenu li {
+    float: none;
+	border-bottom: 1px dashed #69CA62;
+  }
+  .leftmenu li a{
+	transition: all 0.3s;
+  }
+
+  .leftmenu li:hover{
+    background: #FFFFFF;
+    color: #fff;
+  }
+
+  .showmenu{
+    display: block;
+    float: right;
+    margin: 1em;
+  }
+
+  .leftmenu h4{
+	 padding-bottom: 10px;
+  }
+
+  /*jQ點擊後動態在 body 加上 class */
+  .menu-show .leftmenu{
+    max-height: 500px
+  }
+	
+	.content .nav2{
+		float: none;
+	}
+}
+
+.form{
+	float: left; 
+	padding-left: 200px;
+	padding-top: 10px;
+}
+
+.car{
+	float: right; 
+	padding-right: 10px; 
+}
+
+@media(max-width: 598px){
+.form {
+	float: none; 
+	margin-left: 34%;
+	padding-top: 10px;
+   }
+   .car{
+
+	padding-right: 25px; 
+}
+
+
+}
+
+@media(max-width: 414px){
+	.form{
+		float: none; 
+	    margin-left: 38%;
+		padding-top: 10px;
+	}
+	.car{
+		
+		padding-right: 10px; 
+	}
+}
+@media(max-width: 320px){
+	.form{
+	display: none;
+}
+	.car{
+		float: none;
+		margin-left: 170px;
+	}
+}
+
+.car h2{
+	margin-right: 90px;
+	margin-top: 15px; 
+	border-right: 1px solid #6f4e42;
+	padding-right: 30px;
+	cursor: pointer;
+}
+
+.car h2:hover{
+	color: aqua;
+}
+
+
+@media(max-width: 320px){
+	.car h2{
+	 border: none;
+	 float: left;
+	}
+
+}
+
+.menu {
+	float: right;
+	text-align: center;
+}
+
+.menu li{
+    width: 200px;
+	height: 280px;
+	
+	float: left;
+	margin: 15px 15px;
+}
+
+.menu img{
+    width: 100%;
+	height:40%;
+	
+}
+
+.menu h1{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 20px;
+    color: #3D1101;
+	padding-top: 10px;
+}	
+
+.menu p{
+   font-family: MicrosoftJhengHeiRegular;
+   font-size: 12px;
+   color: #3D1101;
+   padding-top: 10px;
+   padding-bottom: 15px;
+   border-bottom: 1px solid #3D1101;
+}
+	
+.menu span{
+  font-family: Roboto-Light;
+  font-size: 20px;
+  color: #3D1101;
+}
+
+.menu h2{
+ border: 2px solid #FF5E45;
+ border-radius: 3px;
+ font-family: MicrosoftJhengHeiRegular;
+ font-size: 16px;
+ color: #FF5E45;
+ padding: 3px;
+ margin-top: 40px;
+}
+
+@media(max-width: 598px){
+	.menu{
+		height: auto;
+		float: none;
+		width: 30%;
+		margin-left: 60%;
+	}
+}
+
+
+@media(max-width: 320px){
+	.menu{
+		height: auto;
+		float: none;
+		width: 30%;
+		margin-left: 30px;
+	}
+}
+
+.clearfix{
+    clear:both; 
+}
+
+.footer{
+	background: #efe9e7;
+	height: 200px;
+}
+
+.footer .str{
+	float: left;
+}
+
+.footer .len{
+	float: left;
+}
+
+.footer h3{
+	font-family: MicrosoftJhengHeiRegular;
+    font-size: 24px;
+    color: #3D1101;
+	padding: 20px 20px;
+}
+
+.footer h2{
+	font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: #3D1101;
+	padding-top: 30px;
+	padding-left: 20px;
+}
+
+.footer ul{
+	font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: #3D1101;
+	padding-top: 30px;
+	padding-left: 20px;
+}
+.footer li{
+  padding-top: 5px;
+}
+
+.name{
+  float: right;
+  font-family: NotoSansCJKtc-Black;
+  font-size: 49px;
+  color: #3D1101;
+  letter-spacing: 0px;
+}
+
+.name h3{
+  font-family: NotoSansCJKtc-Black;
+  font-size: 49px;
+  color: #3D1101;
+  letter-spacing: 0px;
+}
+
+.name li{
+  float: right;
+  padding-right: 30px;
+}
+
+@media(max-width: 598px){
+	.footer{
+		height: auto;
+	}
+
+	.name{
+		float: none;
+		display: none;
+	}
+}
+
+@media(max-width: 414px){
+	.footer{
+		height: auto;
+	}
+
+	.name{
+		float: none;
+		display: none;
+	}
+}
+
+@media(max-width: 320px){
+	.footer{
+		height: auto;
+	}
+
+	.name{
+		float: none;
+		display: none;
+	}
+}
